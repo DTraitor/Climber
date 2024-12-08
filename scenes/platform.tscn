@@ -1,18 +1,19 @@
 [gd_scene load_steps=3 format=3 uid="uid://43vc6i4618wt"]
 
-[ext_resource type="Texture2D" uid="uid://dsbieerlvbo5f" path="res://sprites/icon.svg" id="1_tw0sm"]
+[ext_resource type="Texture2D" uid="uid://cxqx6q6dvqqmw" path="res://assets/1 Tiles/IndustrialTile_01.png" id="1_ogpcv"]
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_f6gmp"]
-size = Vector2(460, 141)
+size = Vector2(110, 31)
 
 [node name="StaticBody2D" type="StaticBody2D"]
 
 [node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 0.5)
 shape = SubResource("RectangleShape2D_f6gmp")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 scale = Vector2(3.44531, 1)
-texture = ExtResource("1_tw0sm")
+texture = ExtResource("1_ogpcv")
 
 [node name="desired_pos" type="Marker2D" parent="."]
-position = Vector2(0, -159)
+position = Vector2(0, -22)

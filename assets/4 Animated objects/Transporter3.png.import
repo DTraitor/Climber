@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://hw5xd2pf8e8o"
-path="res://.godot/imported/Transporter3.png-f2bb059ec4cf6da892084ec8ad854b52.ctex"
+path="res://.godot/imported/Transporter3.png-e09cea53b4e93acd1405b2dde6d7e1e6.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/4 Animated objects/Transporter3.png"
-dest_files=["res://.godot/imported/Transporter3.png-f2bb059ec4cf6da892084ec8ad854b52.ctex"]
+source_file="res://assets/4 Animated objects/Transporter3.png"
+dest_files=["res://.godot/imported/Transporter3.png-e09cea53b4e93acd1405b2dde6d7e1e6.ctex"]
 
 [params]
 

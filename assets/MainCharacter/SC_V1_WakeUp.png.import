@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://bmp4qq0pf8eqv"
-path="res://.godot/imported/SC_V1_WakeUp.png-8f24e57f10969478640ac69799cd718f.ctex"
+path="res://.godot/imported/SC_V1_WakeUp.png-e7458d942d0de07c4bde52037170467f.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MainCharacter/SC_V1_WakeUp.png"
-dest_files=["res://.godot/imported/SC_V1_WakeUp.png-8f24e57f10969478640ac69799cd718f.ctex"]
+source_file="res://assets/MainCharacter/SC_V1_WakeUp.png"
+dest_files=["res://.godot/imported/SC_V1_WakeUp.png-e7458d942d0de07c4bde52037170467f.ctex"]
 
 [params]
 

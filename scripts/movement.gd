@@ -5,7 +5,7 @@ signal on_user_start_drag
 signal on_user_drag(dir: Vector2, speed: float, gravity: Vector2, delta: float)
 signal on_user_stop_drag
 
-const speed = 700
+const speed = 1400
 const max_distance = 200
 const move_speed = 15000
 

@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://dbnhic7u2gicc"
-path="res://.godot/imported/SC_V1_FallingAsleep.png-a39d56ab370a8b8f7f93f64f5bedc0d8.ctex"
+path="res://.godot/imported/SC_V1_FallingAsleep.png-3bb0a008a51b8974f979a25aed6dc2c0.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://Assets/MainCharacter/SC_V1_FallingAsleep.png"
-dest_files=["res://.godot/imported/SC_V1_FallingAsleep.png-a39d56ab370a8b8f7f93f64f5bedc0d8.ctex"]
+source_file="res://assets/MainCharacter/SC_V1_FallingAsleep.png"
+dest_files=["res://.godot/imported/SC_V1_FallingAsleep.png-3bb0a008a51b8974f979a25aed6dc2c0.ctex"]
 
 [params]
 
