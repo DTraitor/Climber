@@ -6,6 +6,7 @@ signal on_user_drag(dir: Vector2, speed: float, gravity: Vector2, delta: float)
 signal on_user_stop_drag
 
 const speed = 700
+const max_distance = 200
 const move_speed = 15000
 
 var pressed = false
@@ -24,6 +25,7 @@ func _physics_process(delta: float) -> void:
 		if(global_position.distance_to(desired_pos) <= 20):
 			moving = false
 			$CollisionShape2D.disabled = false
+			velocity = Vector2.ZERO
 			return
 		velocity = (desired_pos - global_position).normalized() * delta * move_speed
 		move_and_slide()
@@ -36,7 +38,7 @@ func _physics_process(delta: float) -> void:
 	
 	if pressed:
 		on_user_drag.emit(
-			(get_global_mouse_position() - $Centre.global_position).normalized() * -1,
+			get_move_vector(),
 			speed,
 			get_gravity(), 
 			delta
@@ -61,7 +63,14 @@ func _unhandled_input(event: InputEvent) -> void:
 	hook.position = position
 	hook.terminate_position_y = global_position.y + 200
 	hook.connect('hit_platform', on_platform_hit)
-	hook.thrown((get_global_mouse_position() - $Centre.global_position).normalized() * -1, speed)
+	hook.thrown(get_move_vector(), speed)
+
+
+func get_move_vector() -> Vector2:
+	var speed = (get_global_mouse_position() - $Centre.global_position)
+	if get_global_mouse_position().distance_to($Centre.global_position) > max_distance:
+		return speed.normalized() * -1
+	return (speed / max_distance) * -1
 
 
 func on_platform_hit(platform: Node2D) -> void:
