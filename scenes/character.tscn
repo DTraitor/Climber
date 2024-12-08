@@ -1,0 +1,50 @@
+[gd_scene load_steps=7 format=3 uid="uid://cctqwp087yiqk"]
+
+[ext_resource type="Script" path="res://scripts/movement.gd" id="1_ighkb"]
+[ext_resource type="Texture2D" uid="uid://dsbieerlvbo5f" path="res://sprites/icon.svg" id="2_42y2g"]
+[ext_resource type="Script" path="res://scripts/hook_preview.gd" id="3_rohtp"]
+
+[sub_resource type="GDScript" id="GDScript_e03ht"]
+script/source = "extends RectangleShape2D
+"
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_31lmm"]
+size = Vector2(128, 128)
+script = SubResource("GDScript_e03ht")
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_y3ek3"]
+size = Vector2(64, 20)
+
+[node name="CharacterBody2D" type="CharacterBody2D"]
+collision_layer = 2
+input_pickable = true
+script = ExtResource("1_ighkb")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+z_index = -1
+texture = ExtResource("2_42y2g")
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 1)
+shape = SubResource("RectangleShape2D_31lmm")
+
+[node name="Line2D" type="Line2D" parent="."]
+script = ExtResource("3_rohtp")
+
+[node name="CollisionTest" type="CharacterBody2D" parent="Line2D"]
+collision_layer = 4
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="Line2D/CollisionTest"]
+light_mask = 4
+shape = SubResource("RectangleShape2D_y3ek3")
+
+[node name="Centre" type="Marker2D" parent="."]
+
+[node name="Camera2D" type="Camera2D" parent="."]
+
+[node name="MoveLine" type="Line2D" parent="."]
+
+[connection signal="input_event" from="." to="." method="_on_input_event"]
+[connection signal="on_user_drag" from="." to="Line2D" method="update_trajectory"]
+[connection signal="on_user_start_drag" from="." to="Line2D" method="_show_line"]
+[connection signal="on_user_stop_drag" from="." to="Line2D" method="_hide_line"]
